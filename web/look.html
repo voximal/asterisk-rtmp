@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<style type="text/css">
+.impPreview{
+    position:absolute;
+    top: 150; /*[wherever you want it]*/
+    left:400; /*[wherever you want it]*/
+}
+</STYLE>
+</HEAD>
+
+<BODY LANG="fr-FR" DIR="LTR">
+
+<script type='text/javascript'>
+
+function userIdChange()  {
+    var autolog = document.getElementById("autoconnect");
+    var autologValue = autolog.options[autolog.selectedIndex].value;
+    var userid = document.getElementById("userid");
+    var called = document.getElementById("called");
+    //alert(selectedValue + " / " + userid.disabled);
+    if (autologValue == "true") {
+        userid.disabled=false;
+        called.disabled=false;
+    }
+    else {
+        userid.disabled=true;
+        called.disabled=true;
+    }
+}
+
+function autoCallChange()  {
+    var autocall = document.getElementById("autocall");
+    var autocallValue = autocall.options[autocall.selectedIndex].value;
+    var called = document.getElementById("called");
+    //alert(selectedValue + " / " + userid.disabled);
+    if (autocallValue == "true") {
+        called.disabled=false;
+    }
+    else {
+        called.disabled=true;
+    }
+}
+function benchChange()  {
+    var bench = document.getElementById("bench");
+    var intercall = document.getElementById("intercall");
+    //alert(selectedValue + " / " + userid.disabled);
+    if (bench.value != "0") {
+        intercall.disabled=false;
+    }
+    else {
+        intercall.disabled=true;
+    }
+}
+
+</script>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=3 STYLE="page-break-inside: avoid">
+    <COL WIDTH=256*>
+    <TR>
+        <TD WIDTH=100% VALIGN=TOP>
+            <P><IMG SRC="ulex.png" NAME="images2" ALIGN=LEFT WIDTH=200 HEIGHT=100 BORDER=0><BR CLEAR=LEFT><BR>
+            </P>
+        </TD>
+    </TR>
+    <TR>
+        <TD WIDTH=100% ALIGN="CENTER">
+            <P><FONT FACE="Arial Black, sans-serif"><FONT SIZE=4>
+            <B>FlashPhone main parameters</B></FONT></FONT></P>
+            <BR><BR>
+        </TD>
+    </TR>
+    <TR>
+        <TD WIDTH=100% VALIGN=TOP>
+            <form method="get" action="custom_phone.php" >
+                <TABLE>
+                    <TR>
+                        <TD>Select the URL RTMP (or  @IP) :</TD>
+                        <TD>
+                            <INPUT TYPE="text" NAME="gatewayURL" VALUE="rtmp://demo.ulex.fr"/>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>GUI Look :</TD>
+                        <TD>
+                            <select name="look" ID="idSelectLook">
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="camera" >Camera</option>
+                              <option value="viziyoo" >Viziyoo</option>
+                              <option value="microphone" >Microphone</option>
+                              <option value="player" >Player</option>
+                              <option value="fullscreen" >FullScreen</option>
+                              <option value="simple" >Simple</option>
+                              <option value="simple2" >Simple2</option>
+                              <option value="basic" >Basic</option>
+                              <option value="autologin">Autologin</option>
+                              <option value="half" >Half</option>
+                              <option value="half2" >Half2</option>
+                              <option value="master" >Master</option>
+                              <option value="agent" >Agent</option>
+                              <option value="microtest" >Microtest</option>
+                              <option value="audio2" >Audio2</option>
+                              <option value="audio" >Audio</option>
+                              <option value="audiokeypad" >Audiokeypad</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Autologin :</TD>
+                        <TD>
+                            <select name="autoConnect" id="autoconnect" onchange="userIdChange();" >
+                              <option value="true" >Yes</option>
+                              <option value="false" SELECTED="selected" >No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Login :</TD>
+                        <TD>
+                            <input id="userid" name="authName" TYPE="text" value="rtmp99" SIZE="20"/>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Default camera use :</TD>
+                        <TD>
+                            <select name="defVideoUse">
+                              <option value="true" SELECTED="selected" >Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Auto answer :</TD>
+                        <TD>
+                            <select name="autoAnswer">
+                              <option value="true" >Yes</option>
+                              <option value="false" SELECTED="selected" >No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>VideoSize :</TD>
+                        <TD>
+                            <select name="videoSize" >
+                              <option value="cif" >cif</option>
+                              <option value="qcif" SELECTED="selected" >qcif</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Video quality :</TD>
+                        <TD><input name="videoQuality" TYPE="number" SIZE="3" value="80"/></TD>
+                    </TR>
+                    <TR>
+                        <TD>Video bandwith :</TD>
+                        <TD><input name="videoBandwidth" TYPE="number" SIZE="5" value="180000"/></TD>
+                    </TR>
+                    <TR>
+                        <TD>Auto call :</TD>
+                        <TD>
+                            <select name="autoCall" id="autocall" onchange="autoCallChange();" >
+                              <option value="true" >Yes</option>
+                              <option value="false" SELECTED="selected" >No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Auto Recall :</TD>
+                        <TD>
+                            <select name="autoReCall" id="autorecall"  >
+                              <option value="true" >Yes</option>
+                              <option value="false" SELECTED="selected" >No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Show DTMF :</TD>
+                        <TD>
+                            <select name="showDtmf" id="showdtmf"  >
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Show Called number :</TD>
+                        <TD>
+                            <select name="showCalled" id="showcalled"  >
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Show Call duration :</TD>
+                        <TD>
+                            <select name="showDuration" id="showduration"  >
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Show Hangup/Call image :</TD>
+                        <TD>
+                            <select name="showImgHangupCall" id="showImgHangupCall"  >
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Save settings :</TD>
+                        <TD>
+                            <select name="saveSettings" id="savesettings"  >
+                              <option value="default" SELECTED="selected" >Defaut</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Called number for auto call :</TD>
+                        <TD><input id="called" name="targetURL" TYPE="text" SIZE="20" value="700" /></TD>
+                    </TR>
+                    <TR>
+                        <TD>Test :</TD>
+                        <TD><input id="bench" name="bench" TYPE="text" SIZE="20" value="0" onchange="benchChange();"/></TD>
+                    </TR>
+                    <TR>
+                        <TD>Timeout between calls (bench) :</TD>
+                        <TD><input id="intercall" name="intercall" TYPE="text" SIZE="2" value="0" /></TD>
+                    </TR>
+                    <TR ALIGN="center">
+                        <TD><input type="submit" name="GenPage" value="Get FlashPhone"></TD>
+                    </TR>
+                  </TABLE>
+            </form>
+        </TD>
+    </TR>
+</TABLE>
+</P>
+</BODY>
+</HTML>
