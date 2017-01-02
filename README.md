@@ -30,6 +30,6 @@ The client allows to set differents skins.
 Demonstration
 -------------
 
-[default]:http://rtmp.ulex.fr/
+default :http://rtmp.ulex.fr/
 
-[looks]:http://rtmp.ulex.fr/look.html
+more looks :http://rtmp.ulex.fr/look.html
