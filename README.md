@@ -4,7 +4,7 @@ chan_rtmp
 ---
 A RTMP Channel for Asterisk
 
-* Writen in C using asterisk-wrapper.
+* Writen in C using asterisk-macros.
 * Asterisk 1.6 to Asterisk 11.
 * This module supports realtime and static peers.
 
@@ -27,7 +27,9 @@ make install
 Client
 ------
 
-The client allows to set differents skins.
+The client over FlashPlayer allows to set differents skins.
+
+An Android SDK for smartphone/webtv is available to create video call applications.
 
 
 Demonstration
