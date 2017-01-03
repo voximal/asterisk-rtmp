@@ -13,7 +13,9 @@ Installation
 ------------
 
 ```sh
-export ASTERISKDIR=/usr...
+export ASTERISKMACROSDIR=[Asterisk macros Git Voximal directory]
+export ASTERISKDIR=[Asterisk source directory]
+export LINUX_BUILD=[x86-64 or i686 or armv6l]
 
 git clone [git-repo-url] chan_rtmp
 cd chan_rtmp
