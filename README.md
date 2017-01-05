@@ -18,7 +18,7 @@ export ASTERISKDIR=[Asterisk sources directory]
 export LINUX_BUILD=[x86-64 or i686 or armv6l]
 export LIBGEOIPDIR=[GeoIP sources directory]/libGeoIP/
 
-git clone [git-repo-url] chan_rtmp
+git clone https://github.com/voximal/asterisk-rtmp chan_rtmp
 cd chan_rtmp/src
 make
 make install
