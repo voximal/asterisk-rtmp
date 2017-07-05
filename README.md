@@ -14,12 +14,11 @@ Main features
 * This module supports realtime and static peers.
 * Text/Chat features
 * Audio and Video
+* Codecs supported : Speex, a/ulaw , PCM 16 bits, Video Sorenson
 * Geo localisation (with IP)
 * Works with Vconference (Video / Switch module), Transcode (video transcoder)
 * configuration file (rtmp.conf)
 * realtime configuration
-* Codecs supported : Speex, a/ulaw , PCM 16 bits, Video Sorenson
-
  
 Installation
 ------------
