@@ -2,13 +2,25 @@ chan_rtmp
 =========
 
 ---
-A RTMP Channel for Asterisk
+The RTMP Asterisk module allows to place audio (and video) calls from a web browser using the FlashPlayer from Adobe(R).
+
+We offer a free FlashPhone to connect to the Asterisk using the RTMP module.
+
+Main features
+-------------
 
 * Writen in C using asterisk-macros.
-* Asterisk 1.6 to Asterisk 11.
+* Asterisk 1.6 to Asterisk 11.(help requested to port it to Asterisk 13/14)
 * This module supports realtime and static peers.
+* Text/Chat features
+* Audio and Video
+* Geo localisation (with IP)
+* Works with Vconference (Video / Switch module), Transcode (video transcoder)
+* configuration file (rtmp.conf)
+* realtime configuration
+* Codecs supported : Speex, a/ulaw , PCM 16 bits, Video Sorenson
 
-
+ 
 Installation
 ------------
 
@@ -32,12 +44,13 @@ The client over FlashPlayer allows to set differents skins.
 An Android SDK for smartphone/webtv is available to create video call applications.
 
 
-Demonstration
--------------
+Demo
+----
 
-default : http://rtmp.ulex.fr/webphone
+- default : http://rtmp.ulex.fr/webphone
 
-more looks : http://rtmp.ulex.fr/webphone/look.html
+- more looks : http://rtmp.ulex.fr/webphone/look.html
+
 
 
 Contact 
