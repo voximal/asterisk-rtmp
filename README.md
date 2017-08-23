@@ -39,6 +39,7 @@ Client
 ------
 
 The client over FlashPlayer allows to set differents skins.
+(Chrome seems to need to host your HTML pages in a HTTS server)
 
 An Android SDK for smartphone/webtv is available to create video call applications.
 
@@ -46,9 +47,9 @@ An Android SDK for smartphone/webtv is available to create video call applicatio
 Demo
 ----
 
-- default : http://rtmp.ulex.fr/webphone
+- default : https://rtmp.ulex.fr/webphone
 
-- more looks : http://rtmp.ulex.fr/webphone/look.html
+- more looks : https://rtmp.ulex.fr/webphone/look.html
 
 
 
