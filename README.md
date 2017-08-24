@@ -47,9 +47,9 @@ An Android SDK for smartphone/webtv is available to create video call applicatio
 Demo
 ----
 
-- default : https://rtmp.ulex.fr/webphone
+- default : https://rtmp.ulex.fr:44110/webphone/
 
-- more looks : https://rtmp.ulex.fr/webphone/look.html
+- more looks : https://rtmp.ulex.fr:44110/webphone/look.html
 
 
 
