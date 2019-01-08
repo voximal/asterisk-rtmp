@@ -48,8 +48,8 @@ Demo
 ----
 
 - default : https://rtmp.ulex.fr:44129/webphone/
-
-- more looks : https://rtmp.ulex.fr:44129/webphone/look.html
+- no https : http//rtmp.ulex.fr/webphone/
+- more looks : http://rtmp.ulex.fr/webphone/look.html
 
 
 
